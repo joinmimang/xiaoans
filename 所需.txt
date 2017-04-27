@@ -1,0 +1,21 @@
+百度地图开放API：http://lbsyun.baidu.com/index.php?title=jspopular/guide/event
+highcharts API 文档：https://api.hcharts.cn/
+highcharts 实例：https://www.hcharts.cn/demo/highcharts
+
+Echarts 实例： http://echarts.baidu.com/demo.html#map-china-dataRange
+Echarts API文档：1. http://www.bootcss.com/p/chart.js/docs/
+		 2. http://echarts.baidu.com/echarts2/doc/doc.html
+node.js API文档：http://www.runoob.com/nodejs/nodejs-tutorial.html
+node.js 学习文档：https://my.oschina.net/tbd/blog/552713
+
+
+柱状图：https://www.hcharts.cn/demo/highcharts/column-parsed
+线性图：https://code.hcharts.cn/demos/hhhhxL
+散点图：https://code.hcharts.cn/demos/hhhhDx
+饼状图：https://www.hcharts.cn/demo/highcharts/pie-legend
+
+
+
+bootstarp菜单栏侧滑：http://www.w2bc.com/article/177824
+
+express中文API: http://www.expressjs.com.cn/guide/using-middleware.html
