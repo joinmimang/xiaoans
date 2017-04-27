@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/laydate/laydate.js"></script>
+</head>
+<body>
+<form role="form" class="form-signin" method="post" action="/get_data">
+    <label>开始日</label><input id="start"  name="start" class="laydate-icon">
+    <label>结束日</label><input id="end" name="end" class="laydate-icon">
+    <input type="hidden" class="hidden_id" name="unitId" value="">
+    <button type="submit" class="btn btn-primary"  id="get_data" style="width: 100px;">提交</button>
+</form>
+</body>
+<script>
+    var start = {
+        elem: '#start',
+        format: 'YYYY-MM-DD',
+        // min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16 23:59:59', //最大日期
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas; //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#end',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: '2099-06-16 23:59:59',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+</script>
+<script>
+    $(function () {
+        var unitId = localStorage.unitId;
+        $('.hidden_id').val(unitId);
+        $("#get_data").click(function () {
+            var starttime = $("#start").val();
+            var endtime = $("#end").val();
+            if(starttime==""||endtime==""){
+                alert("请选择时间区间");
+                return false;
+            }
+            localStorage.starttime = starttime;
+            localStorage.endtime = endtime;
+        });
+    });
+</script>
+</html>

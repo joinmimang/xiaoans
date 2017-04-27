@@ -1,0 +1,122 @@
+.content {
+    margin: auto;
+    position: relative;
+    margin-left: 199px;
+}
+
+.container {
+    background-color: #FFFFFF;
+    padding: 15px;
+}
+
+#myTab {
+    background-color: #FFFFFF;
+}
+
+#myTab li {
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 33.334%;
+}
+
+.tab-content {
+    height: 700px;
+    background-color: #FFFFFF !important;
+}
+
+.tab-content div {
+    background-color: #FFFFFF;
+    color: #1D2A38;
+}
+
+.formbox {
+    /*width: 488px;*/
+    width: 100%;
+    /*margin: 40px auto;*/
+}
+
+.formcon {
+    /*padding: 10px 0;*/
+    border: solid 1px #ddd
+}
+
+.small_title {
+    background-color: #f8f8f8;
+    padding: 1rem !important;
+    color: #000;
+    font-size: 16px;
+    opacity: .87;
+    border: 1px solid rgba(120, 130, 140, .25);
+    box-sizing: border-box;
+}
+
+.font_color {
+    color: #999;
+    margin-top: 6px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.padding_left_none {
+    padding-left: 0px !important;
+}
+
+.padding_right_none {
+    padding-right: 0px !important;
+}
+
+.margin_right_20 {
+    margin-right: 20px;
+}
+
+.red_star {
+    color: red;
+}
+
+.person_lable {
+    color: #00B7FF;
+}
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.tab-pane {
+    margin-top: 25px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.file-preview-frame {
+    margin: 0px !important;
+    margin-left: -3px !important;
+    height: 160px;
+    border: 0px solid #ddd !important;
+    box-shadow: 1px 1px 5px 0 #a2958a;
+    padding: 0px !important;
+}
+
+.uploadify-button {
+    background-color: #FFF !important; ;
+    background-image: linear-gradient(bottom, #FFF 0%, #FFF 100%);
+    background-image: -o-linear-gradient(bottom, #FFF 0%, #FFF 100%);
+    background-image: -moz-linear-gradient(bottom, #FFF 0%, #FFF 100%);
+    background-image: -ms-linear-gradient(bottom, #FFF 0%, #FFF 100%);
+    background-repeat: no-repeat;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border: 1px solid #808080 !important;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    width: 100%;
+}

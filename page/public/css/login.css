@@ -1,0 +1,80 @@
+.Bj_background{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.bj_one{
+    background: url(/images/bj.png);
+    height: 43vh;
+    background-size:100% 100%;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.bj_two{
+    background: url(/images/xia.png);
+    height: 43vh;
+    background-size:100% 100%;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.footer{
+    height: 14vh;
+    background-color: #2E3E4E;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.form_table{
+    height: 408px;
+    width: 420px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 99;
+    margin: 0 auto;
+    margin-top: 5%;
+    -webkit-box-shadow: 0 0 60px #4caf50;
+    -moz-box-shadow: 0 0 60px #4caf50;
+    box-shadow: 0 0 60px #4caf50;
+}
+.form_title{
+    height: 88px;
+    text-align: center;
+    line-height: 88px;
+}
+.form_body{
+    width:278px;
+    height:274px;
+    /*border: 1px #cccccc solid;*/
+    margin-left: 70px;
+}
+.mar_top_24{
+    margin-top: 24px;
+}
+.form-control{
+    height: 38px !important;
+}
+button[type="submit"]{
+    width: 100%;
+    height: 38px;
+    background-color:#4caf50 !important;
+    color: #FFFFFF !important;
+}
+.ic_user{
+    background:url(/images/ic.png)-3px -5px no-repeat !important;
+    padding-left: 36px;
+}
+.ic_pass{
+    background:url(/images/ic.png)-3px -37px no-repeat !important;
+    padding-left: 36px;
+}
+.login_txt{
+    position: relative;
+    z-index: 99;
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 900;
+    font-family: SimSun;
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    text-shadow: #4caf50 0 6px 0;
+}

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>表格数据</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/uploadify.css"/>
+    <link rel='stylesheet' href='/css/form_table.css'/>
+    <link href="//cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.uploadify.min.js"></script>
+    <script src="/js/file_input.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/laydate/laydate.js"></script>
+</head>
+<body>
+<!--头部导航栏-->
+<header>
+
+</header>
+<!--左边菜单-->
+<article id="article">
+    <div class="system_icon">
+        <div>桃源安全隐患排查整治系统</div>
+    </div>
+    <section>
+        <div class="mune_list">
+            <div id="mune_list">
+                <ul>
+                    <li class="li_active">
+                        <img src="/images/jianzhuxinxi.png">
+                        <a href="list_data">
+                            单位列表
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--个人信息-->
+    <div class="person_data">
+        <!--用户头像-->
+        <div class="head_div">
+            <img src="<%= head_pic %>" class="header_png">
+        </div>
+        <!--用户文字信息-->
+        <div class="data_text">
+            <div>
+                <span style="font-size: 12px;color: #ffffff;">当前用户： <%= code %></span>
+                <br>
+                <span style="font-size: 13px;color: #3ec2ff;">
+                    <!--<a href="http://www.xiaofangyun.com.cn/">-->
+                        <!--消安科技-->
+                    <!--</a>-->
+                </span>
+            </div>
+        </div>
+    </div>
+</article>
+<!--右边内容-->
+<aside class="col-xs-12" style="padding-right:0px;">
+    <div style="height: 100%;width: 100%;">
+        <div class="build_css">
+            <div class="build_title">
+                <div class="col-xs-2">
+                    <label class="build_list_lable">编辑单位</label>
+                </div>
+                <div class="col-xs-8">
+
+                </div>
+                <div class="col-xs-2" style="text-align: right;line-height: 60px;">
+                    <div>
+                        <ul class="nav navbar-nav" style="float: right;">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <%= code %>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="exit_btn">安全退出</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="iframe" style=" border: 0px solid red">
+        <div class="page_wrapper" style="height: 100%;width: 100%;">
+            <div class="container">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active"><a href="#home">单位基本信息</a></li>
+                    <li><a href="#messages">责任人员信息</a></li>
+                    <li><a href="#profile">单位人员信息</a></li>
+                </ul>
+                <div class="formcon">
+                    <form role="form" class="form-signin" method="post" action="/edit_form_table">
+                        <div class="tab-content">
+                            <!--单位基本信息-->
+                            <div class="tab-pane active" id="home">
+                                <!--单位(场所)名称-->
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-2">
+                                        <span class="red_star">*</span>
+                                        <label for="username" class="font_color">单位(场所)名称</label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="text" name="unitName" id="username" class="form-control"
+                                               placeholder="请输入名称" value="<%= list.unitName %>">
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <!--单位地址-->
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-2">
+                                        <label class="font_color">单位地址</label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="text" name="unitAddress" class="form-control" placeholder="请输入所在地址" value="<%= list.unitAddress %>">
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <!--场所面积-->
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-2">
+                                        <label class="font_color">场所面积</label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="text" name="placeArea" class="form-control" placeholder="请输入场所面积" value="<%= list.unitDetail.placeArea %>">
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <!--企业性质-->
+                                <!--<div class="row form-group">-->
+                                    <!--<div class="col-xs-2"></div>-->
+                                    <!--<div class="col-xs-2">-->
+                                        <!--<label class="font_color">企业性质</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-6">-->
+                                        <!--<div class="radio">-->
+                                            <!--<label class="margin_right_20">-->
+                                                <!--<input type="radio" name="optionsRadios" value="option1" checked>-->
+                                                <!--国有-->
+                                            <!--</label>-->
+                                            <!--<label class="margin_right_20">-->
+                                                <!--<input type="radio" name="optionsRadios" value="option2">-->
+                                                <!--民营-->
+                                            <!--</label>-->
+                                            <!--<label class="margin_right_20">-->
+                                                <!--<input type="radio" name="optionsRadios" value="option3">-->
+                                                <!--合资-->
+                                            <!--</label>-->
+                                            <!--<label class="margin_right_20">-->
+                                                <!--<input type="radio" name="optionsRadios" value="option4">-->
+                                                <!--外资-->
+                                            <!--</label>-->
+                                            <!--<label class="margin_right_20">-->
+                                                <!--<input type="radio" name="optionsRadios" value="option5">-->
+                                                <!--个体-->
+                                            <!--</label>-->
+                                            <!--<label class="margin_right_20">-->
+                                                <!--<input type="radio" name="optionsRadios" value="option6">-->
+                                                <!--其他-->
+                                            <!--</label>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-2"></div>-->
+                                <!--</div>-->
+                                <!--营业执照注册号-->
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-2">
+                                        <label class="font_color">营业执照注册号</label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="text" name="businessLicenseStrn" class="form-control" placeholder="请输入营业执照注册号" value="<%= list.unitDetail.businessLicenseStrn %>">
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <!--所在社区-->
+                                <!--<div class="row form-group">-->
+                                    <!--<div class="col-xs-2"></div>-->
+                                    <!--<div class="col-xs-2">-->
+                                        <!--<span class="red_star">*</span>-->
+                                        <!--<label class="font_color">企业性质</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-2">-->
+                                        <!--<% if (list.enterpriseNature=='1') { %>-->
+                                        <!--<input type="text" name="enterpriseNature" class="form-control" placeholder="请输入企业性质" value="国有">-->
+                                        <!--<% } %>-->
+                                        <!--<% if (list.enterpriseNature=='2') { %>-->
+                                        <!--<input type="text" name="enterpriseNature" class="form-control" placeholder="请输入企业性质" value="民营">-->
+                                        <!--<% } %>-->
+                                        <!--<% if (list.enterpriseNature=='3') { %>-->
+                                        <!--<input type="text" name="enterpriseNature" class="form-control" placeholder="请输入企业性质" value="合资">-->
+                                        <!--<% } %>-->
+                                        <!--<% if (list.enterpriseNature=='4') { %>-->
+                                        <!--<input type="text" name="enterpriseNature" class="form-control" placeholder="请输入企业性质" value="外资">-->
+                                        <!--<% } %>-->
+                                        <!--<% if (list.enterpriseNature=='5') { %>-->
+                                        <!--<input type="text" name="enterpriseNature" class="form-control" placeholder="请输入企业性质" value="个体">-->
+                                        <!--<% } %>-->
+                                        <!--<% if (list.enterpriseNature=='0') { %>-->
+                                        <!--<input type="text" name="enterpriseNature" class="form-control" placeholder="请输入企业性质" value="其他">-->
+                                        <!--<% } %>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-2 text_center">-->
+                                        <!--<span class="red_star">*</span>-->
+                                        <!--<label class="font_color">单位类型</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-2">-->
+                                        <!--<% if (list.unitType=='1') { %>-->
+                                        <!--<input type="text" name="unitType" class="form-control" placeholder="请输入单位类型" value="三小场所">-->
+                                        <!--<% } %>-->
+                                        <!--<% if (list.unitType=='2') { %>-->
+                                        <!--<input type="text" name="unitType" class="form-control" placeholder="请输入单位类型" value="房中房">-->
+                                        <!--<% } %>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-xs-2"></div>-->
+                                <!--</div>-->
+                                <!--门牌号 经营范围-->
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-2">
+                                        <label class="font_color">门牌号</label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <input type="text" name="houseNumber" class="form-control" placeholder="请输入门牌号" value="<%= list.houseNumber %>">
+                                    </div>
+                                    <div class="col-xs-2 text_center">
+                                        <label class="font_color">经营范围</label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <input type="text" name="businessScope" class="form-control" placeholder="请输入经营范围" value="<%= list.businessScope %>">
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <!--单位照片 营业执照-->
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-2">
+                                        <label class="font_color">单位照片</label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="form-group">
+                                            <div style="height: 162px;width: 100%;border: 1px solid #ccc;">
+                                                <img src="<%= list.unitImage %>" id="unit_png" style="width: 100%;height: 100%;">
+                                            </div>
+                                            <input type="hidden" name="unitImage" value="<%= list.unitImage %>">
+                                        </div>
+                                        <input type="file" name="file_upload" id="file_upload_unit" />
+                                    </div>
+                                    <!--dream it possible-->
+                                    <div class="col-xs-2 text_center">
+                                        <label class="font_color">营业执照</label>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="form-group">
+                                            <div style="height: 160px;width: 100%;border: 1px solid #ccc;">
+                                                <img src="<%= list.unitDetail.licensePhoto %>" id="person_png" style="width: 100%;height: 100%;">
+                                            </div>
+                                            <input type="hidden" name="licensePhoto" value="<%= list.unitDetail.licensePhoto %>">
+                                        </div>
+                                        <input type="file" name="file_upload" id="file_upload_person" />
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                            </div>
+                            <!--责任人员信息-->
+                            <div class="tab-pane" id="messages">
+                                <!--经营者-->
+                                <div class="row form-group">
+                                    <div class="col-xs-12 person_lable">
+                                        <span class="red_star">*</span>
+                                        <label>经营者</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">姓名</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="operatorName" class="form-control" placeholder="姓名" value="<%= list.unitDetail.operatorName %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">手机号</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="operatorTelNumber" class="form-control" placeholder="手机号" value="<%= list.unitDetail.operatorTelNumber %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">身份证</label>
+                                    </div>
+                                    <div class="col-xs-5 padding_left_none">
+                                        <input type="text" name="operatorIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitDetail.operatorIdCard %>">
+                                    </div>
+                                </div>
+                                <hr>
+                                <!--业主-->
+                                <div class="row form-group">
+                                    <div class="col-xs-12 person_lable">
+                                        <span class="red_star">*</span>
+                                        <label>业主</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">姓名</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="ownerName" class="form-control" placeholder="姓名" value="<%= list.unitDetail.ownerName %>" >
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">手机号</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="ownerTelNumber" class="form-control" placeholder="手机号" value="<%= list.unitDetail.ownerTelNumber %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">身份证</label>
+                                    </div>
+                                    <div class="col-xs-5 padding_left_none">
+                                        <input type="text" name="ownerIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitDetail.ownerIdCard %>">
+                                    </div>
+                                </div>
+                                <hr>
+                                <!--社区安全责任人-->
+                                <div class="row form-group">
+                                    <div class="col-xs-12 person_lable">
+                                        <span class="red_star">*</span>
+                                        <label>社区安全责任人</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">姓名</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="csmPersonCharge" class="form-control" placeholder="姓名" value="<%= list.unitDetail.csmPersonCharge %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">手机号</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="csmPersonChargeTelNumber" class="form-control" placeholder="手机号" value="<%= list.unitDetail.csmPersonChargeTelNumber %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">身份证</label>
+                                    </div>
+                                    <div class="col-xs-5 padding_left_none">
+                                        <input type="text" name="csmPersonChargeIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitDetail.csmPersonChargeIdCard %>">
+                                    </div>
+                                </div>
+                                <hr>
+                                <!--本场所消防安全管理人-->
+                                <div class="row form-group">
+                                    <div class="col-xs-12 person_lable">
+                                        <label>本场所消防安全管理人</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">姓名</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="fsmPersonCharge" class="form-control" placeholder="姓名" value="<%= list.unitDetail.fsmPersonCharge %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">手机号</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="fsmPersonChargeTelNumber" class="form-control" placeholder="手机号" value="<%= list.unitDetail.fsmPersonChargeTelNumber %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">身份证</label>
+                                    </div>
+                                    <div class="col-xs-5 padding_left_none">
+                                        <input type="text" name="fsmPersonChargeIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitDetail.fsmPersonChargeIdCard %>">
+                                    </div>
+                                </div>
+                                <hr>
+                                <!--消防管理责任人-->
+                                <div class="row form-group">
+                                    <div class="col-xs-12 person_lable">
+                                        <label>消防管理责任人</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">姓名</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="fmPersonCharge" class="form-control" placeholder="姓名" value="<%= list.unitDetail.fmPersonCharge %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">手机号</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="fmPersonChargeTelNumber" class="form-control" placeholder="手机号" value="<%= list.unitDetail.fmPersonChargeTelNumber %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">身份证</label>
+                                    </div>
+                                    <div class="col-xs-5 padding_left_none">
+                                        <input type="text" name="fmPersonChargeIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitDetail.fmPersonChargeIdCard %>">
+                                    </div>
+                                </div>
+                                <hr>
+                                <!--物业信息-->
+                                <div class="row form-group">
+                                    <div class="col-xs-12 person_lable">
+                                        <label>物业信息</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">姓名</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="pcPersonCharge" class="form-control" placeholder="姓名" value="<%= list.unitDetail.pcPersonCharge %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">手机号</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="pcPersonChargeTelNumber" class="form-control" placeholder="手机号" value="<%= list.unitDetail.pcPersonChargeTelNumber %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center padding_right_none">
+                                        <label class="font_color">身份证</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none padding_right_none">
+                                        <input type="text" name="pcPersonChargeIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitDetail.pcPersonChargeIdCard %>">
+                                    </div>
+                                    <div class="col-xs-1 text_center">
+                                        <label class="font_color">物业公司</label>
+                                    </div>
+                                    <div class="col-xs-2 padding_left_none">
+                                        <input type="text" name="pcName" class="form-control" placeholder="请输入物业公司" value="<%= list.unitDetail.pcName %>">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--单位人员信息-->
+                            <div class="tab-pane" id="profile" style="height: 680px;overflow-y: auto;">
+                                <!--经营者-->
+                                <div>
+                                    <div class="row form-group">
+                                        <div class="col-xs-12">
+                                            <div class="col-lg-6">
+                                                <label>经营者</label>
+                                            </div>
+                                            <div class="col-lg-6" style="text-align: right;">
+                                                <button type="button" class="btn btn-primary add_btn_run">添加</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <ul id="parent-list" style="list-style: none;">
+                                        <li>
+                                            <div class="row form-group run_people">
+                                                <div class="col-xs-1 text_center padding_left_none padding_right_none" style="width: 75px;">
+                                                    <label class="font_color">姓名</label>
+                                                </div>
+                                                <div class="col-xs-1 padding_left_none ">
+                                                    <input type="text" name="operatorName" class="form-control" placeholder="姓名" value="<%= list.unitOperatorList.operatorName %>">
+                                                </div>
+                                                <div class="col-xs-1 text_center padding_left_none padding_right_none" style="width: 75px;">
+                                                    <label class="font_color">手机号</label>
+                                                </div>
+                                                <div class="col-xs-2 padding_left_none ">
+                                                    <input type="text" name="operatorTelNumber" class="form-control" placeholder="手机号">
+                                                </div>
+                                                <div class="col-xs-1 text_center padding_left_none padding_right_none" style="width: 75px;">
+                                                    <label class="font_color">身份证</label>
+                                                </div>
+                                                <div class="col-xs-2 padding_left_none">
+                                                    <input type="text" name="operatorIdCard" class="form-control" placeholder="身份证号码" value="<%= list.unitOperatorList.operatorIdCard %>">
+                                                </div>
+                                                <div class="col-xs-2 text_center padding_left_none padding_right_none" style="width: 110px;">
+                                                    <label class="font_color">与经营者关系</label>
+                                                </div>
+                                                <div class="col-xs-2 padding_left_none">
+                                                    <input type="text"  name="operatorRelation" class="form-control" placeholder="与经营者关系" value="<%= list.unitOperatorList.operatorRelation %>">
+                                                </div>
+                                                <div class="remove">
+                                                    <button type="button" class="btn btn-primary remove_btn_run" style="margin-left: 54px;">
+                                                        删除
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </li>
+                                        <li>
+                                            <div class="row form-group run_people">
+                                                <div class="col-xs-1 text_center padding_left_none padding_right_none" style="width: 75px;">
+                                                    <label class="font_color">姓名</label>
+                                                </div>
+                                                <div class="col-xs-1 padding_left_none ">
+                                                    <input type="text" name="operatorName" class="form-control" placeholder="姓名">
+                                                </div>
+                                                <div class="col-xs-1 text_center padding_left_none padding_right_none" style="width: 75px;">
+                                                    <label class="font_color">手机号</label>
+                                                </div>
+                                                <div class="col-xs-2 padding_left_none ">
+                                                    <input type="text" name="operatorTelNumber" class="form-control" placeholder="手机号">
+                                                </div>
+                                                <div class="col-xs-1 text_center padding_left_none padding_right_none" style="width: 75px;">
+                                                    <label class="font_color">身份证</label>
+                                                </div>
+                                                <div class="col-xs-2 padding_left_none">
+                                                    <input type="text" name="operatorIdCard" class="form-control" placeholder="身份证号码">
+                                                </div>
+                                                <div class="col-xs-2 text_center padding_left_none padding_right_none" style="width: 110px;">
+                                                    <label class="font_color">与经营者关系</label>
+                                                </div>
+                                                <div class="col-xs-2 padding_left_none">
+                                                    <input type="text"  name="operatorRelation" class="form-control" placeholder="与经营者关系">
+                                                </div>
+                                                <div class="remove">
+                                                    <button type="submit" class="btn btn-primary remove_btn_run" style="margin-left: 54px;">
+                                                        删除
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--提交按钮-->
+                        <div class="row form-group">
+                            <div class="col-xs-12" style="text-align: center;">
+                                <!--<button type="submit" id="send_btn" class="btn btn-primary" style="width: 100px;">提交</button>-->
+                                <button type="button" class="btn btn-primary" style="width: 100px;" onclick="javascript:history.back(-1);">
+                                    返回
+                                </button>
+                                <input type="hidden" name="unitId" value="<%= list.unitId %>">
+                                <input type="hidden" name="unitType" value="<%= list.unitType %>">
+                                <input type="hidden" name="unitNature" value="<%= list.unitNature %>">
+                                <input type="hidden" name="enterpriseNature" value="<%= list.enterpriseNature %>">
+                                <input type="hidden" name="lon" value="<%= list.lon %>">
+                                <input type="hidden" name="lat" value="<%= list.lat %>">
+                                <input type="hidden" name="xzqy" value="<%= list.xzqy %>">
+                                <input type="hidden" name="licenseExpiryDate" value="<%= list.unitDetail.licenseExpiryDate %>">
+                                <input type="hidden" name="registeredCapital" value="<%= list.unitDetail.registeredCapital %>">
+                                <input type="hidden" name="totalAssets" value="<%= list.unitDetail.totalAssets %>">
+                                <input type="hidden" name="chineseNameAndShares" value="<%= list.unitDetail.chineseNameAndShares %>">
+                                <input type="hidden" name="outsideNameAndShares" value="<%= list.unitDetail.outsideNameAndShares %>">
+                                <input type="hidden" name="buildingHeight" value="<%= list.unitDetail.buildingHeight %>">
+                                <input type="hidden" name="buildingLayer" value="<%= list.unitDetail.buildingLayer %>">
+                                <input type="hidden" name="venueLeasingExpiryDate" value="<%= list.unitDetail.venueLeasingExpiryDate %>">
+                                <input type="hidden" name="openingTime" value="<%= list.unitDetail.openingTime %>">
+                                <input type="hidden" name="buildingDiaxmj" value="<%= list.unitDetail.buildingDiaxmj %>">
+                                <input type="hidden" name="overallFloorage" value="<%= list.unitDetail.overallFloorage %>">
+                                <button type="submit" class="btn btn-primary" style="width: 100px;">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<footer></footer>
+</body>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/form_table.js"></script>
+</html>

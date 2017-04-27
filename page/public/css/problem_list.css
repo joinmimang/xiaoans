@@ -1,0 +1,246 @@
+.content{
+    margin: auto;
+    position: relative;
+    margin-left: 199px;
+}
+.box-shadow-z0{
+    box-shadow: none !important;
+    border: 0;
+}
+.p-a-md{
+    /*padding: 1.5rem!important;*/
+    padding: 14px;
+}
+.p-b{
+    padding-bottom: 1rem!important;
+}
+.seacher_down{
+    background: #f8f8f8 !important;
+    box-shadow: inset 0 0 0 1px rgba(120,130,140,.25);
+}
+.btn-green{
+    background-color: #43a047;
+    color: rgba(255, 255, 255, 0.87);
+}
+.clear{
+    display: block;
+    overflow: hidden;
+}
+.box{
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.light{
+    background-color: #f8f8f8;
+}
+.p-a{
+    /*padding: 1rem!important;*/
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.m-a-0{
+    margin: 0!important;
+}
+.batch-header .cli-check {
+    width: 92px;
+    margin-top: 7px;
+}
+.pull-left {
+    float: left!important;
+}
+.md-check {
+    cursor: pointer;
+    padding-left: 20px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+.checkbox input{
+    position: absolute;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0;
+}
+.checkbox span{
+    display: block;
+    float: right;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+.b-b-light {
+    border-bottom: 1px solid rgba(120,130,140,.13);
+}
+.b-b-light {
+    border-bottom-color: #f8f8f8;
+}
+.dark-white, .white {
+    background-color: #fff;
+}
+.list-item {
+    display: block;
+    position: relative;
+    padding: 12px 16px;
+}
+/*.p-b-md, .p-y-md {*/
+/*padding-bottom: 1.5rem!important;*/
+/*}*/
+/*.p-l, .p-x {*/
+/*padding-left: 1rem!important;*/
+/*}*/
+ul, li {
+    list-style: none outside none;
+}
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row-col {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 100%;
+    height: 100%;
+}
+.row-cell {
+    vertical-align: top;
+    display: table-cell;
+}
+.list-item-check {
+    width: 20px;
+    vertical-align: middle;
+}
+.list-item-check .cli-check {
+    margin-top: 10px;
+}
+.md-check {
+    cursor: pointer;
+    padding-left: 20px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+.type-icon-wrap {
+    height: 65px;
+}
+.w-64 {
+    width: 64px;
+}
+.text-center {
+    text-align: center;
+}
+.text-xs {
+    font-size: .75rem;
+}
+.m-t-xs, .m-y-xs {
+    /*margin-top: .25rem!important;*/
+}
+.none {
+    display: none;
+}
+.m-l-sm, .m-x-sm {
+    /*margin-left: .5rem!important;*/
+}
+.pos-rlt {
+    position: relative;
+    z-index: 1;
+}
+.desc-wrap span {
+    max-width: 320px;
+    font-size: 13px;
+}
+.pull-left {
+    float: left;
+}
+.text-ellipsis {
+    display: block;
+}
+.h-1x, .h-2x, .h-3x, .h-4x, .md-btn, .md-btn.md-fab, .text-ellipsis {
+    overflow: hidden;
+}
+.md-btn, .pointer, .ui-check, .ui-switch, a {
+    cursor: pointer;
+}
+.avatar, .h-1x, .list-icon div, .md-btn, .text-ellipsis {
+    white-space: nowrap;
+}
+.h-1x, .list-icon div, .text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text-grey {
+    color: #999;
+}
+.text-grey {
+    color: #999;
+}
+.text-xs {
+    font-size: .75rem;
+}
+.m-b-sm, .m-y-sm {
+    /*margin-bottom: .5rem!important;*/
+}
+.text-darkgrey {
+    color: #666;
+}
+
+.text-ellipsis {
+    display: block;
+}
+.text-xs {
+    font-size: .75rem;
+}
+.pull-right{
+    float: right!important;
+}
+.list-btn{
+    float: right;
+}
+.list-item-check input{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0;
+}
+.btn_four{
+    margin-top: 4px;
+}
+.btn_three{
+    margin-top: 4px;
+    text-align: center;
+    margin-left: 20px;
+}
+.btn_two{
+    margin-top: 4px;
+}
+/*.btn_one{*/
+/*margin-top: 20%;*/
+/*}*/
+.btn-sm{
+    background-color: #fff;
+    border: 1px #ccc solid !important;
+}
+.btn-sm:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+.thisclass{
+    text-decoration: none;
+    background: #000;
+}
+.table_title{
+    text-align: center;
+    line-height: 34px;
+}
+.jz_time{
+    text-align: center;
+}
+a {
+    color: #00B7FF;
+}
