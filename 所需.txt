@@ -19,3 +19,43 @@ node.js 学习文档：https://my.oschina.net/tbd/blog/552713
 bootstarp菜单栏侧滑：http://www.w2bc.com/article/177824
 
 express中文API: http://www.expressjs.com.cn/guide/using-middleware.html
+
+读取数据库数据并在HighCharts上显示:http://blog.csdn.net/zdw_wym/article/details/6325942
+
+Highcharts之动态刷新——结合后台数据:http://www.tuicool.com/articles/2E3qIba
+
+使用HighCharts创建第一个图表实例:http://blog.csdn.net/zdw_wym/article/details/6325853
+
+node+express+ejs制作简单页面上手指南:http://www.jb51.net/article/57864.htm
+
+node.js学习：https://my.oschina.net/tbd/blog?catalog=3363296&temp=1488853414708
+
+EJS 模板快速入门:http://blog.csdn.net/zhangxin09/article/details/18409119/
+
+创建node从零开始：http://www.cnblogs.com/syomm/p/5957675.html
+
+H5新特性:http://blog.csdn.net/baidu_31333625/article/details/53505643
+
+JS常用API合集:https://www.kancloud.cn/dennis/tgjavascript/241852
+
+基于NODEJS的前后端项目分离实践：http://jiangxiao-2000.iteye.com/blog/2219921
+
+Flex 布局教程：http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+
+canvas笔记：http://www.qdfuns.com/notes/24704/78bb2769d1701aa18739b35ff6c4fb6b.html
+
+数据验证插件bootstrapValidator：http://www.cnblogs.com/v-weiwang/p/4834672.html?ptvd
+
+Node.JS的表单提交及OnceIO中接受GET/POST数据的三种方法：http://www.tuicool.com/articles/jYvaAnq
+
+
+
+
+
+
+
+
+
+
+
+
